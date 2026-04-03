@@ -34,9 +34,7 @@
 					<div class="about-content">
 						<div class="section-title">
 							<p>
-								@php
-									echo $page->details;
-								@endphp
+								{!! $page->details !!}
 							</p>
 						</div>
 					</div>

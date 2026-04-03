@@ -46,9 +46,7 @@
 									</div>
 								</div>
 								<div class="blog__details">
-									@php
-										echo $data->details;
-									@endphp
+									{!! $data->details !!}
 
 									<div class="d-flex align-items-center flex-wrap">
 										<h6 class="m-0 me-2 align-items-center">@lang('Share Now')</h6>

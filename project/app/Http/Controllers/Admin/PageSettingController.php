@@ -236,6 +236,11 @@ class PageSettingController extends Controller
     {
         $page = Pagesetting::findOrFail(1);
         $input = $request->all();
+
+        $input['side_title'] = Purifier::clean($request->side_title);
+        $input['side_text'] = Purifier::clean($request->side_text);
+        $input['street'] = Purifier::clean($request->street);
+
         $page->update($input);
         $msg = 'Data Updated Successfully.';
         return response()->json($msg);
